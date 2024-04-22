@@ -1,0 +1,41 @@
+[
+    {
+      "date": "2024-04-20",
+      "events": [
+        {
+          "hour": "12am",
+          "duration": "1h",
+          "title": "Amoxilina",
+          "type":"med"
+        }
+      ]
+    },
+    {
+      "date": "2024-04-21",
+      "events": [
+        {
+          "hour": "4pm",
+          "duration": "1h",
+          "title": "Pilates ABC",
+          "type":"med",
+          "especialidade":"Cardiologista"
+        },
+        {
+          "hour": "5pm",
+          "duration": "1h",
+          "title": "Vinyasa Yoga"
+        }
+      ]
+    },
+    {
+      "date": "2024-04-23",
+      "events": [
+        {
+          "hour": "12am",
+          "duration": "1h",
+          "title": "Ashtanga Yoga"
+        }
+      ]
+    }
+  ]
+  

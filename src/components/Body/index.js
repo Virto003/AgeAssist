@@ -1,50 +1,65 @@
 import React from "react";
-import { View, StatusBar, Text, StyleSheet, Image } from 'react-native';
+import { View, StatusBar, Text, StyleSheet, Image, Pressable } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
-export default function Body() {
+
+
+export default function Body({navigation}) {
+
+    function medico(){
+        navigation.navigate('medico')
+      }
+  function agenda(){
+    navigation.navigate('agenda')
+  }
+  function contatos(){
+    navigation.navigate('contatos')
+  }
+  function games(){
+    navigation.navigate('games')
+  }
     return (
         <View style={styles.container}>
-            <View style={styles.content}>
+            <Pressable style={styles.content} onPress={medico}>
             <Image
         style={styles.img}
         source={require('./img/medico.png')}
       />
                 <Text style={styles.title}>Informações do Doutor</Text>
                 <Text style={styles.subtitle}>Encontre Especialistas Facilmente</Text>
-            </View>
-            <View style={styles.content}>
+            </Pressable>
+            <Pressable style={styles.content}>
             <Image
         style={styles.img}
         source={require('./img/prescr.png')}
       />
                 <Text style={styles.title}>Prescrições Medicas</Text>
                 <Text style={styles.subtitle}>Central de Prescrições Digitais</Text>
-            </View>
-            <View style={styles.content}>
+            </Pressable>
+            <Pressable style={styles.content} onPress={agenda}>
             <Image
         style={styles.img}
         source={require('./img/agenda.png')}
       />
                 <Text style={styles.title}>Agenda</Text>
                 <Text style={styles.subtitle}>Datas de consultas e horarios de medicação</Text>
-            </View>
-            <View style={styles.content}>
+            </Pressable>
+            <Pressable style={styles.content} onPress={contatos}>
             <Image
         style={styles.img}
         source={require('./img/contato.png')}
       />
                 <Text style={styles.title}>Contatos</Text>
                 <Text style={styles.subtitle}>Informações de contato</Text>
-            </View>
-            <View style={styles.content}>
+            </Pressable>
+            <Pressable style={styles.content} onPress={games}>
             <Image
         style={styles.img}
         source={require('./img/jogos.png')}
       />
                 <Text style={styles.title}>Jogos</Text>
                 <Text style={styles.subtitle}>Divirta-se!</Text>
-            </View>
+            </Pressable>
         </View>
         
     );
